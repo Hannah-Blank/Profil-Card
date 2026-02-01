@@ -1,18 +1,26 @@
-const themeButtons = document.querySelectorAll(".theme-buttons button");
-const themes = ["dark", "darkblue", "bordeaux"];
+// Hamburger menu
+const toggleButton = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+
+toggleButton.addEventListener("click", () => {
+  menu.classList.toggle("open");
+});
+
+// Theme switching
+const themeButtons = document.querySelectorAll(".menu button");
+const themes = ["white", "dark", "darkblue", "bordeaux"];
 
 themeButtons.forEach(button => {
   button.addEventListener("click", () => {
-    const selectedTheme = button.getAttribute("data-theme");
+    const selectedTheme = button.dataset.theme;
 
-    // Remove all theme classes
-    themes.forEach(theme => document.body.classList.remove(theme));
+    themes.forEach(theme =>
+      document.body.classList.remove(theme)
+    );
 
-    // Add selected theme
     document.body.classList.add(selectedTheme);
 
-    // Optional: highlight active button
-    themeButtons.forEach(btn => btn.classList.remove("active"));
-    button.classList.add("active");
+    // close menu after selection
+    menu.classList.remove("open");
   });
 });

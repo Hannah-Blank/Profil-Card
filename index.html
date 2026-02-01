@@ -10,15 +10,28 @@
 
     <body>
         <div class="card">
-            <a href="#img-modal">
-                <img src="profile.jpg" alt="Profilbild" class="profile-img">
-            </a>
-            <!-- Modal -->
-             <div id="img-modal" class="modal">
-                <a href="#" class="close">&times;</a>
-                <img src="profile.jpg" alt="Profilbild groß">
-            </div>
-
+            
+            <div class="card-header">
+                <a href="#img-modal">
+                 <img src="profile.jpg" alt="Profilbild" class="profile-img">
+                </a>
+                <!-- Modal -->
+                <div id="img-modal" class="modal">
+                   <a href="#" class="close">&times;</a>
+                   <img src="profile.jpg" alt="Profilbild groß">
+                </div>
+                <nav class="navbar">
+                    <!-- Hamburger Button -->
+                     <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+                     <!-- Hidden Menu -->
+                      <ul class="menu">
+                        <li><button data-theme="white">White</button></li>
+                        <li><button data-theme="dark">Dark</button></li>
+                        <li><button data-theme="darkblue">Dark Blue</button></li>
+                        <li><button data-theme="bordeaux">Bordeaux</button></li>
+                    </ul>
+                </nav>
+            </div>    
             <h2>Hannah Blank</h2>
             <ul class="informations">
                 <h4>Age: 15</h4>
@@ -34,11 +47,6 @@
                 <a href="https://www.instagram.com/hanna.h122010/" class="social-link"><i class="fa-brands fa-instagram"></i></a> 
                 <a href="https://github.com/Hannah-Blank" class="social-link"><i class="fa-brands fa-github"></i></a>
             </div>
-             <div class="theme-buttons">
-                <button data-theme="dark">Dark</button>
-                <button data-theme="darkblue">Dark Blue</button>
-                <button data-theme="bordeaux">Bordeaux</button>
-             </div>
         </div>
         <script src="script.js"> </script>
     </body>
