@@ -1,0 +1,177 @@
+/* ===== Basic Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+/* ===== CSS Variables Default ===== */
+:root {
+  --bg: #f5f5f5;
+  --card: #fff;
+  --text: #111;
+  --button: #111;
+  --button-text: #fff;
+}
+
+/* ===== Body ===== */
+body {
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.3s;
+}
+
+/* ===== Profile Card ===== */
+.card {
+  background: var(--card);
+  color: var(--text);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px #002147;
+  padding: 30px;
+  text-align: center;
+  width: 300px;
+  transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px #002147;
+}
+
+/* ===== Profile Image ===== */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+/* ===== Modal for Image ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== Headings ===== */
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* ===== Info List ===== */
+.informations {
+  color: var(--text);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.informations h4 {
+  margin: 5px 0;
+}
+
+.interests {
+  margin-left: 20px;
+}
+
+/* ===== Social Links ===== */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.social-link {
+  font-size: 24px;
+  color: var(--text);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
+}
+
+/* ===== Theme Buttons ===== */
+.theme-buttons {
+  margin-top: 15px;
+}
+
+.theme-buttons button {
+  background: var(--button);
+  color: var(--button-text);
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.theme-buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* Active button highlight */
+.theme-buttons button.active {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== Themes ===== */
+body.dark {
+  --bg: #111;
+  --card: #1c1c1c;
+  --text: #f5f5f5;
+  --button: #f5f5f5;
+  --button-text: #111;
+}
+
+body.darkblue {
+  --bg: #002147;
+  --card: #1c2e4a;
+  --text: #f5f5f5;
+  --button: #52677d;
+  --button-text: #111;
+}
+
+body.bordeaux {
+  --bg: #5c0120;
+  --card: #3f070b;
+  --text: #f5f5f5;
+  --button: #4a0404;
+  --button-text: #6d2932;
+}

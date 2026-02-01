@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width/device-width, initial scale=1.0">
+        <title>Profile Card</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="card">
+            <a href="#img-modal">
+                <img src="profile.jpg" alt="Profilbild" class="profile-img">
+            </a>
+            <!-- Modal -->
+             <div id="img-modal" class="modal">
+                <a href="#" class="close">&times;</a>
+                <img src="profile.jpg" alt="Profilbild groß">
+            </div>
+
+            <h2>Hannah Blank</h2>
+            <ul class="informations">
+                <h4>Age: 15</h4>
+                <h4>Nationality: Germany</h4>
+                <h4>Interests:</h4>
+                <ul class="interests">
+                    <li>Formula 1 fan</li>
+                    <li>Web Development</li>
+                    <li>IT</li>
+                </ul>
+            </ul>
+            <div class="socials"> 
+                <a href="https://www.instagram.com/hanna.h122010/" class="social-link"><i class="fa-brands fa-instagram"></i></a> 
+                <a href="https://github.com/Hannah-Blank" class="social-link"><i class="fa-brands fa-github"></i></a>
+            </div>
+             <div class="theme-buttons">
+                <button data-theme="dark">Dark</button>
+                <button data-theme="darkblue">Dark Blue</button>
+                <button data-theme="bordeaux">Bordeaux</button>
+             </div>
+        </div>
+        <script src="script.js"> </script>
+    </body>
+</html>
